@@ -1,5 +1,8 @@
 Директива для отображения html, пока будет загружаться заданное изображение.
 
+Демо:
+  http://bubujka.github.io/bu.ng.nice-preload/
+
 Подключение:
   <script src="bu.ng.nice-preload.js"></script>
 
