@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="bu.ng.nice-preload.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>.image-block{ border: 1px solid red; }</style>
+  </head>
+  <body>
+    <div ng-app="myDemoApp">
+      <div ng-controller="DemoCtrl">
+        <button ng-click='set_image()'>Load image</button>
+        <br>
+        <div class='image-block' nice-preload src='{{my_img_url}}'>
+          Image loading...
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = angular.module('myDemoApp', ['bu.ng.nice-preload'])
+      app.controller('DemoCtrl', function($scope){
+        $scope.set_image = function(){
+          $scope.my_img_url = "http://lorempixel.com/640/480/cats/?"+Math.random()
+        }
+      })
+    </script>
+  </body>
+</html>
+

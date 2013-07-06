@@ -1,0 +1,17 @@
+Директива для отображения html, пока будет загружаться заданное изображение.
+
+Подключение:
+  <script src="bu.ng.nice-preload.js"></script>
+
+  <script>
+
+    angular.module('...', ['bu.ng.nice-preload'])
+
+  </script>
+
+
+Использование:
+
+  <div class='image-block' nice-preload src='{{my_img_url}}'>
+    Image loading...
+  </div>
